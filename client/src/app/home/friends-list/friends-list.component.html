@@ -1,0 +1,28 @@
+<div
+  class="friend-list w-full max-w-[700px] mx-auto bg-main_color py-8 px-16 space-y-10"
+>
+  <div class="title text-center">
+    <h2 class="text-lg font-bold text-gray-50">
+      Liste d'amis ({{ list_friend?.length }})
+    </h2>
+  </div>
+  <div class="list grid grid-cols-3 justify-items-center items-center gap-y-6">
+    <div
+      class="button flex gap-x-3"
+      *ngFor="let friend of list_friend_filtered"
+    >
+      <button
+        class="button px-6 py-2 rounded-full flex items-center justify-between bg-gray-50 gap-x-6"
+        (click)="GoToFridnProfile(friend.username)"
+      >
+        {{ friend.username }}
+      </button>
+      <button
+        class="text-gray-50 hover:text-red-800 transition-all duration-300"
+        (click)="RemoveFriend(friend.id!)"
+      >
+        <fa-icon [icon]="fa_delete_left"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>

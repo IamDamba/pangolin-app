@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "1f5abbc8-337f-4f0a-84f8-8027f673d43e",
+    "colName": "pangolin",
+    "created": "2023-06-13T12:56:30.391Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "011d1814-be7f-4015-ac6f-c25886836b24",
+        "name": "users",
+        "containerId": "",
+        "created": "2023-06-13T12:56:37.247Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "e2e1cf49-957f-4f88-9db2-4a6ca4a2540e",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2023-06-13T18:18:16.568Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "a9bf374c-7e98-481e-b23b-5013ff890281",
+        "name": "friend",
+        "containerId": "",
+        "created": "2023-06-13T21:24:08.601Z",
+        "sortNum": 30000
+      }
+    ]
+  }
+]

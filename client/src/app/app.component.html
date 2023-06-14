@@ -1,0 +1,16 @@
+<div class="header bg-main_color w-full py-4 px-6">
+  <div class="nav max-w-[1500px] mx-auto flex justify-between items-center">
+    <div class="logo">
+      <a href="/"><img src="/assets/logo.svg" alt="" /></a>
+    </div>
+    <div class="logout" *ngIf="is_logged">
+      <p class="text-gray-50 font-bold cursor-pointer" (click)="Disconnect()">
+        Logout
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="app-container relative w-full min-h-[100vh]">
+  <router-outlet></router-outlet>
+</div>

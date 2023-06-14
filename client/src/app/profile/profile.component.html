@@ -1,0 +1,89 @@
+<main class="flex">
+  <div class="right flex-1">
+    <div class="content w-full text-center pt-12 space-y-12">
+      <h1 class="font-bold text-3xl">Mon Profile</h1>
+      <div class="flex flex-col justify-center max-w-[700px] mx-auto">
+        <div class="bottom bg-main_color px-4 py-10">
+          <form
+            class="flex flex-col gap-y-16"
+            #form="ngForm"
+            (ngSubmit)="HandleSubmit(form)"
+          >
+            <div class="inputs flex flex-col gap-y-6">
+              <div class="input grid grid-cols-2 items-center gap-x-4">
+                <label
+                  class="text-start font-semibold text-gray-50"
+                  for="username"
+                  >Nom D'utilisateur</label
+                >
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  [placeholder]="current_pangolin.username"
+                  class="px-4 py-2 placeholder:text-gray-500 placeholder:text-bold text-bold"
+                  [required]="true"
+                  ngModel
+                />
+              </div>
+              <div class="input grid grid-cols-2 items-center gap-x-4">
+                <label
+                  class="text-start font-semibold text-gray-50"
+                  for="password"
+                  >Nouveau mot de passe</label
+                >
+                <input
+                  type="password"
+                  name="new_password"
+                  placeholder="Password"
+                  class="px-4 py-2 text-bold"
+                  [required]="true"
+                  ngModel
+                />
+              </div>
+              <div class="input grid grid-cols-2 items-center gap-x-4">
+                <label
+                  class="text-start font-semibold text-gray-50"
+                  for="password"
+                  >Confirme mot de passe</label
+                >
+                <input
+                  type="password"
+                  name="confirm_password"
+                  placeholder="Password"
+                  class="px-4 py-2 text-bold"
+                  [required]="true"
+                  ngModel
+                />
+              </div>
+              <div class="select grid grid-cols-2 items-center gap-x-4">
+                <label class="text-start font-semibold text-gray-50" for="role"
+                  >Rôle</label
+                >
+                <select
+                  name="role"
+                  id=""
+                  class="px-4 py-2 text-bold"
+                  name="role"
+                  [required]="true"
+                  ngModel
+                >
+                  <option *ngFor="let role of list_roles">
+                    {{ role }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="button">
+              <button
+                class="py-3 w-full max-w-[300px] bg-second_color text-gray-50 rounded-full"
+              >
+                Enregister
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

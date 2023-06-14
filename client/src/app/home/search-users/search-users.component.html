@@ -1,0 +1,23 @@
+<div
+  class="friend-list w-full max-w-[700px] mx-auto bg-main_color py-8 px-16 space-y-10"
+>
+  <div class="title text-center">
+    <input
+      type="text"
+      placeholder="Recherche un amis... (min: 3 chars.)"
+      class="w-full max-w-[500px] py-3 px-4"
+      #input
+      (input)="SearchInput(input)"
+    />
+  </div>
+  <div class="list grid grid-cols-3 justify-items-center gap-y-6">
+    <button
+      *ngFor="let pangolin of list_pangolin"
+      class="button px-6 py-2 rounded-full flex items-center justify-between bg-gray-50 gap-x-6"
+      (click)="AddFriend(pangolin.username)"
+    >
+      <p class="font-bold">{{ pangolin.username }}</p>
+      <fa-icon [icon]="fa_plus_circle"></fa-icon>
+    </button>
+  </div>
+</div>
